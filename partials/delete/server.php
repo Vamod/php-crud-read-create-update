@@ -5,15 +5,21 @@ if(empty($_POST['id'])){
     die('nessun id');
 }
 
+
+$sql = "DELETE FROM stanze WHERE id = ?"; //si possono usare o meno i backtip
+
+$stmt = $conn->prepare($sql);
+// i è un intero per la stringa è s, è un placeholder
+// bind_param se il tipo dato non è giusto restiuisce 0
+$stmt->bind_param("i", $id);
 $id = $_POST['id'];
+$stmt-> execute();
 
-$sql = "DELETE FROM stanze WHERE id = $id"; //si possono usare o meno i backtip
-$result = $conn->query($sql);
 
-if ($result){
-    echo 'ok';
+if ($stmt && $stmt->affected_rows > 0){
+    header("Location: $basepath/index2.php?roomId=$id");
 } else {
-    'ko';
+    echo 'Non è possibile cancellare la stanza';
 }
 
 
