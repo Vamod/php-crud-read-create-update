@@ -17,7 +17,6 @@ include __DIR__ .'/partials/update/server.php';
             <input type="number" class="form-control" name="beds" value="<?php echo $row['beds']; ?>" id="beds">
         </div>
         <div class="form-group">
-            <label for="id">ID</label>
             <input type="hidden" class="form-control" name="id" value="<?php echo $row['id']; ?>">
         </div>
         <div class="form-group">

@@ -1,7 +1,7 @@
 <footer class ="bg-primary text-white p-3">
     Hotel boolean
 </footer>
-<!-- wrapper close -->
-</div>
+
+</div> <!-- wrapper close -->
 </body>
 </html>

@@ -19,7 +19,7 @@ $stmt-> execute();
 if ($stmt && $stmt->affected_rows > 0){
     header("Location: $basepath/index2.php?roomId=$id");
 } else {
-    echo 'Non è possibile cancellare la stanza';
+    echo $stmt->error;
 }
 
 
