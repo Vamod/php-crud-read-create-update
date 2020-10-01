@@ -1,6 +1,6 @@
 <?php  include __DIR__.'/../database.php' ;
 
-$sql = "UPDATE stanze SET room_number = ?, floor = ?, beds = ? WHERE id = ?";
+$sql = "UPDATE stanze SET room_number = ?, floor = ?, beds = ?, updated_at = NOW() WHERE id = ?";
 
 $stmt = $conn->prepare($sql);
 
@@ -21,4 +21,5 @@ if ($stmt && $stmt->affected_rows > 0) {
     die("errore");
 }
 
+$stmt->close();
 $conn->close();

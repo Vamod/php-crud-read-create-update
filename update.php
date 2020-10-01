@@ -13,7 +13,7 @@ include __DIR__ .'/partials/update/server.php';
             <input type="number" class="form-control" name="floor" value="<?php echo $row['floor']; ?>" id="floor">
         </div>
         <div class="form-group">
-            <label for="beds">Floor</label>
+            <label for="beds">Beds</label>
             <input type="number" class="form-control" name="beds" value="<?php echo $row['beds']; ?>" id="beds">
         </div>
         <div class="form-group">
